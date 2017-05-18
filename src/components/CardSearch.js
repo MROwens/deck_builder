@@ -20,7 +20,7 @@ class CardSearch extends React.Component{
 
     mtg.card.where({ name: this.cardInput.value, gameFormat: 'Standard'})
       .then(cards => {
-          console.log(cards);
+          //console.log(cards);
           this.setState({cards});
       })
     //console.log(this.cardInput.value);
