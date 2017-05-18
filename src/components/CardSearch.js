@@ -1,19 +1,21 @@
 import React from 'react'
-
-//const mtg = require('mtgsdk');
 import mtg from 'mtgsdk'
 
+
 class CardSearch extends React.Component{
+
+  constructor(){
+    super();
+    this.state = {
+      cards: {}
+    };
+  }
 
   searchForCards(event){
     event.preventDefault();
     mtg.card.where({ name: this.cardInput.value})
       .then(cards => {
-          cards.forEach(showCards)
-
-          function showCards(item){
-          console.log(item.imageUrl)
-        }
+          console.log(cards);
       })
     console.log(this.cardInput.value);
 
@@ -29,8 +31,6 @@ class CardSearch extends React.Component{
           <input type="text" required placeholder="Card Name" ref={(input) => {this.cardInput = input}} />
           <button type="submit">Search Cards</button>
         </form>
-
-        <p id="cardOutput"></p>
 
       </div>
 
