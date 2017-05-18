@@ -14,13 +14,13 @@ class CardSearch extends React.Component{
     };
   }
 
-//much like add fish | declare state here with cards
   searchForCards(event){
     event.preventDefault();
 
     mtg.card.where({ name: this.cardInput.value, gameFormat: 'Standard'})
       .then(cards => {
-          console.log(cards);
+          //console.log(cards);
+          
           this.setState({cards});
       })
     //console.log(this.cardInput.value);
