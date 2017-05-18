@@ -18,7 +18,7 @@ class CardSearch extends React.Component{
   searchForCards(event){
     event.preventDefault();
 
-    mtg.card.where({ name: this.cardInput.value})
+    mtg.card.where({ name: this.cardInput.value, gameFormat: 'Standard'})
       .then(cards => {
           console.log(cards);
           this.setState({cards});
