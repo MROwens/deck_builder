@@ -1,6 +1,8 @@
 import React from 'react'
 import mtg from 'mtgsdk'
 
+import Card from './Card'
+
 
 class CardSearch extends React.Component{
 
@@ -13,15 +15,8 @@ class CardSearch extends React.Component{
   }
 
 //much like add fish | declare state here with cards
-  searchForCards(event, card){
+  searchForCards(event){
     event.preventDefault();
-    // //existing cards state
-    // const queryCards = {...this.state.queryCards}
-    // //add in new cards
-    // const timestamp = Date.now();
-    // queryCards[`card-${timestamp}`] = card;
-    // //set state
-    // this.setState({queryCards})
 
     mtg.card.where({ name: this.cardInput.value})
       .then(cards => {
@@ -40,6 +35,13 @@ class CardSearch extends React.Component{
           <input type="text" required placeholder="Card Name" ref={(input) => {this.cardInput = input}} />
           <button type="submit">Search Cards</button>
         </form>
+
+        <ul className="list-of-cards">
+          {Object
+            .keys(this.state.cards)
+            .map(key => <Card key={key} details={this.state.cards[key]} />)
+          }
+        </ul>
 
       </div>
 
