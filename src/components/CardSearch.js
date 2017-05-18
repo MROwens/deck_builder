@@ -3,6 +3,7 @@ import mtg from 'mtgsdk'
 
 import Card from './Card'
 
+//comment
 
 class CardSearch extends React.Component{
 
@@ -20,7 +21,6 @@ class CardSearch extends React.Component{
     mtg.card.where({ name: this.cardInput.value, gameFormat: 'Standard'})
       .then(cards => {
           //console.log(cards);
-          
           this.setState({cards});
       })
     //console.log(this.cardInput.value);
