@@ -2,6 +2,7 @@ import React from 'react'
 import mtg from 'mtgsdk'
 
 import Card from './Card'
+import styles from '../css/card-search.css';
 
 //comment
 
@@ -26,7 +27,7 @@ class CardSearch extends React.Component{
     //console.log(this.cardInput.value);
   }
 
-  
+
 
   render(){
     return(
@@ -45,7 +46,6 @@ class CardSearch extends React.Component{
           }
         </ul>
 
-        <h1>{this.props.propsTest}</h1>
 
       </div>
 

@@ -1,0 +1,36 @@
+.cardSearch form{
+  margin-left: 60px;
+}
+
+.cardSearch form input{
+  width: 500px;
+  height: 40px;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.cardSearch button{
+  height: 50px;
+  margin-left: 10px;
+  font-size: 1.5em;
+  background: #282C34;
+  color: #eee;
+  border: none;
+}
+
+.cardSearch button:hover{
+  background: #eee;
+  color: #282C34;
+}
+
+.list-of-cards{
+  margin: 20px;
+  list-style-type: none;
+  padding: none;
+}
+
+.list-of-cards li{
+  float: left;
+  width: 223px;
+  margin: 10px;
+}
