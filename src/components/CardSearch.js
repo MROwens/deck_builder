@@ -26,6 +26,8 @@ class CardSearch extends React.Component{
     //console.log(this.cardInput.value);
   }
 
+  
+
   render(){
     return(
 
@@ -42,6 +44,8 @@ class CardSearch extends React.Component{
             .map(key => <Card key={key} details={this.state.cards[key]} />)
           }
         </ul>
+
+        <h1>{this.props.propsTest}</h1>
 
       </div>
 
