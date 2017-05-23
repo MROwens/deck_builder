@@ -4,8 +4,6 @@ import mtg from 'mtgsdk'
 import Card from './Card'
 import styles from '../css/card-search.css';
 
-//comment
-
 class CardSearch extends React.Component{
 
   constructor(){
@@ -26,32 +24,23 @@ class CardSearch extends React.Component{
       })
     //console.log(this.cardInput.value);
   }
-
-
-
   render(){
     return(
-
       <div className='cardSearch'>
-
         <form className='card-search' onSubmit={(e) => this.searchForCards(e)}>
           <input type="text" required placeholder="Card Name" ref={(input) => {this.cardInput = input}} />
           <button type="submit">Search Cards</button>
         </form>
-
         <ul className="list-of-cards">
           {Object
             .keys(this.state.cards)
             .map(key => <Card key={key} details={this.state.cards[key]} />)
           }
         </ul>
-
-
       </div>
 
     );
   }
 
 }
-
 export default CardSearch;
