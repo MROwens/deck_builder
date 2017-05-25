@@ -8,7 +8,7 @@ class DeckList extends Component {
 
       <div className="deck-list">
 
-        <ul><li>adls;fkha;lskdfja</li></ul>
+        <ul><li>{this.props.name}</li></ul>
 
       </div>
 

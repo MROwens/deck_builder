@@ -1,6 +1,6 @@
 import React from 'react'
 import mtg from 'mtgsdk'
-
+import DeckList from './DeckList'
 import Card from './Card'
 import styles from '../css/card-search.css';
 
@@ -24,6 +24,16 @@ class CardSearch extends React.Component{
       })
     //console.log(this.cardInput.value);
   }
+
+  // test(e){
+  //   e.preventDefault();
+  //   //console.log(e.currentTarget);
+  //   console.log('clicked');
+  //   console.log(e.currentTarget);
+  //   console.log(this.props.children.details.name);
+  //
+  // }
+
   render(){
     return(
       <div className='cardSearch'>
@@ -37,10 +47,11 @@ class CardSearch extends React.Component{
             .map(key => <Card key={key} details={this.state.cards[key]} />)
           }
         </ul>
+
       </div>
 
     );
   }
-
+//pass function through props, call it in decklist , pass back
 }
 export default CardSearch;
