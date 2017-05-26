@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 class TestDraw extends Component {
   render() {
     return (

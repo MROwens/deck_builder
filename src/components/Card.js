@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 
-
 class Card extends Component {
 
   //Creating an instance of Card for each card that matches search

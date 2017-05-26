@@ -1,8 +1,7 @@
 import React from 'react';
 import mtg from 'mtgsdk';
-import DeckList from './DeckList';
 import Card from './Card';
-import styles from '../css/card-search.css';
+import '../css/card-search.css';
 
 class CardSearch extends React.Component{
 
@@ -29,7 +28,6 @@ class CardSearch extends React.Component{
           this.setState({cards});
       })
   }
-
 
   render(){
     return(
